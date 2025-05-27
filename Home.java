@@ -5,10 +5,7 @@ import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 
 public class Home extends JFrame implements ActionListener {
     public Home() {
@@ -50,10 +47,38 @@ public class Home extends JFrame implements ActionListener {
         
         
         JLabel heading = new JLabel("DEV AIRLINES WELCOMES YOU");
-        heading.setBounds(500, 20, 1000, 40);
-        heading.setForeground(Color.BLUE);
-        heading.setFont(new Font("Tahome", Font.PLAIN, 40));
+        heading.setBounds(600, 400, 1000, 40);
+        heading.setForeground(Color.WHITE);
+        heading.setFont(new Font("Onyx", Font.BOLD, 40));
         label.add(heading);
+        
+        JMenuBar menubar = new JMenuBar();
+        setJMenuBar(menubar);
+        
+        JMenu details = new JMenu("Details");
+        menubar.add(details);
+        
+        
+        JMenuItem flightdetails = new JMenu("Flight Details");
+        details.add(flightdetails);
+        
+        JMenuItem customerdetails = new JMenu("Add Customer Details");
+        details.add(customerdetails);
+        
+        JMenuItem bookflight = new JMenu("Book Flight");
+        details.add(bookflight);
+        
+        JMenuItem journeydetails = new JMenu("Journey Details");
+        details.add(journeydetails);
+        
+        JMenuItem ticketcancellation = new JMenu("Cancel Ticket");
+        details.add(ticketcancellation);
+        
+        JMenuItem ticket = new JMenu("Ticket");
+        menubar.add(ticket);
+        
+        JMenuItem boardingpass = new JMenu("Boarding Pass");
+        ticket.add(boardingpass);
     }
 
     @Override

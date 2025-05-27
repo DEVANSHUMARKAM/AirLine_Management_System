@@ -65,8 +65,7 @@ public class Login extends JFrame implements ActionListener {
                 ResultSet rs = stmt.executeQuery(query);
 
                 if (rs.next()) {
-                    System.out.println("Valid");
-                    JOptionPane.showMessageDialog(null, "Login Successful");
+                    new Home();
                     setVisible(false);
                     // Open a new window or redirect to another screen
                 } else {
