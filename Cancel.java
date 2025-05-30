@@ -104,7 +104,7 @@ public class Cancel extends JFrame implements ActionListener{
         flight.addActionListener(this);
         add(flight);
         
-        ImageIcon image = new ImageIcon(ClassLoader.getSystemResource("airlinemanagementsystem/Cancel.png"));
+        ImageIcon image = new ImageIcon(ClassLoader.getSystemResource("airlinemanagementsystem/Images/Cancel.png"));
         JLabel lblimage = new JLabel(image);
         lblimage.setBounds(490, 80, 410, 600);
         add(lblimage);
@@ -155,7 +155,7 @@ public class Cancel extends JFrame implements ActionListener{
             conn.s.executeUpdate("delete from reservation where PNR = '"+pnr+"'");
             
             JOptionPane.showMessageDialog(null,"Ticket Cancelled!!!");
-            setVisible(true);
+            setVisible(false);
             
         }catch(Exception e){
             e.printStackTrace();

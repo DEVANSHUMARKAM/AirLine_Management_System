@@ -22,7 +22,7 @@ public class Home extends JFrame implements ActionListener {
         // Load the image
         BufferedImage image = null;
         try {
-            image = ImageIO.read(getClass().getResource("/airlinemanagementsystem/Homepage.jpg"));
+            image = ImageIO.read(getClass().getResource("/airlinemanagementsystem/Images/Homepage.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -107,6 +107,6 @@ public class Home extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new Home());
+        new Home();
     }
 }
