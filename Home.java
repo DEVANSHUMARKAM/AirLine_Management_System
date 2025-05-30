@@ -45,11 +45,10 @@ public class Home extends JFrame implements ActionListener {
         setUndecorated(true); // Remove window decorations
         setVisible(true);
         
-        
         JLabel heading = new JLabel("DEV AIRLINES WELCOMES YOU");
-        heading.setBounds(600, 400, 1000, 40);
+        heading.setBounds(400, 300, 2000, 60);
         heading.setForeground(Color.WHITE);
-        heading.setFont(new Font("Onyx", Font.BOLD, 40));
+        heading.setFont(new Font("Onyx", Font.BOLD, 70));
         label.add(heading);
         
         JMenuBar menubar = new JMenuBar();
@@ -68,18 +67,22 @@ public class Home extends JFrame implements ActionListener {
         details.add(customerdetails);
         
         JMenuItem bookflight = new JMenuItem("Book Flight");
+        bookflight.addActionListener(this);
         details.add(bookflight);
         
         JMenuItem journeydetails = new JMenuItem("Journey Details");
+        journeydetails.addActionListener(this);
         details.add(journeydetails);
         
         JMenuItem ticketcancellation = new JMenuItem("Cancel Ticket");
+        ticketcancellation.addActionListener(this);
         details.add(ticketcancellation);
         
         JMenu ticket = new JMenu("Ticket");
         menubar.add(ticket);
         
-        JMenuItem boardingpass = new JMenu("Boarding Pass");
+        JMenuItem boardingpass = new JMenuItem("Boarding Pass");
+        boardingpass.addActionListener(this);
         ticket.add(boardingpass);
     }
 
@@ -92,6 +95,14 @@ public class Home extends JFrame implements ActionListener {
             new AddCustomer();
         }else if(text.equals("Flight Details")){
             new Flightinfo();
+        }else if(text.equals("Book Flight")){
+            new BookFlight();
+        }else if(text.equals("Journey Details")){
+            new JourneyDetails();
+        }else if(text.equals("Cancel Ticket")){
+            new Cancel();
+        }else if(text.equals("Boarding Pass")){
+            new BoardingPass();
         }
     }
 
