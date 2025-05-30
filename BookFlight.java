@@ -1,4 +1,3 @@
-
 package airlinemanagementsystem;
 
 import java.awt.*;
@@ -162,9 +161,9 @@ public class BookFlight extends JFrame implements ActionListener{
         dcdate.setBounds(250, 555, 200, 30);
         add(dcdate);
         
-        ImageIcon image = new ImageIcon(ClassLoader.getSystemResource("airlinemanagementsystem/Passenger.jpg"));
+        ImageIcon image = new ImageIcon(ClassLoader.getSystemResource("airlinemanagementsystem/Bookflight.jpg"));
         JLabel lblimage = new JLabel(image);
-        lblimage.setBounds(500, 80, 320, 600);
+        lblimage.setBounds(500, 100, 320, 600);
         add(lblimage);
         
         bookflight = new JButton("BOOK FLIGHT");
@@ -249,6 +248,7 @@ public class BookFlight extends JFrame implements ActionListener{
             conn.s.executeUpdate(query);
             
             JOptionPane.showMessageDialog(null,"Ticket Booked Successfully!!!");
+            setVisible(false);
         }catch(Exception e){
             e.printStackTrace();
         }
